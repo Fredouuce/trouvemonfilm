@@ -13,7 +13,9 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
-
+  env: {
+    apiKey: process.env.API_KEY || "http://localhost:3000",
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
