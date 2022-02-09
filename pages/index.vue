@@ -129,7 +129,7 @@
       </form>
       <!-- Les genres on été choisis -->
       <!-- Etape 3: Affichage des films ou séries trouver -->
-      <div class="loader" v-else-if="step_2 == false && isLoading == true">
+      <!-- <div class="loader" v-else-if="step_2 == false && isLoading == true">
         <div class="lds-roller">
           <div></div>
           <div></div>
@@ -140,8 +140,8 @@
           <div></div>
           <div></div>
         </div>
-      </div>
-      <div v-else-if="step_2 == false && isLoading == false" class="datas">
+      </div> -->
+      <div v-else-if="step_2 == false" class="datas">
         <h2>
           Vous avez séléctionner :
           <span
