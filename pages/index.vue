@@ -227,14 +227,14 @@ export default {
         this.$axios
           .get(
             `https://api.themoviedb.org/3/discover/movie?api_key=${
-              process.env.API_KEY
+              process.env.NUXT_ENV_API_KEY
             }&primary_release_date.lte=${
               this.todayDate
             }&include_adult=false&language=fr-FR&sort_by=popularity.desc&page=1&with_genres=${this.selectedGenres.join(
               ","
             )}`
           )
-          //https://api.themoviedb.org/3/discover/movie?api_key=68e6fe20044408329e01bb72c56233d4&language=fr-FR&sort_by=popularity.desc&page=1&with_genres=80,27
+
           .then((response) => {
             this.datas = response.data.results;
             this.genreById();
@@ -248,7 +248,7 @@ export default {
         this.$axios
           .get(
             `https://api.themoviedb.org/3/discover/tv?api_key=${
-              process.env.API_KEY
+              process.env.NUXT_ENV_API_KEY
             }&primary_release_date.lte=${
               this.todayDate
             }&include_adult=false&language=fr-FR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&with_genres=${this.selectedGenres.join(
@@ -270,7 +270,7 @@ export default {
         .get(
           `https://api.themoviedb.org/3/discover/${
             this.type == "film" ? "movie" : "tv"
-          }?api_key=${process.env.API_KEY}&language=fr-FR&sort_by=${
+          }?api_key=${process.env.NUXT_ENV_API_KEY}&language=fr-FR&sort_by=${
             this.trie
           }&include_adult=false&primary_release_date.lte=${
             this.todayDate
@@ -306,7 +306,7 @@ export default {
     /*******************Séléction des genres a vérifier si ca ne créer pas des bug au niveau de certains genres(L'api vise les films ,a vérifié la compatibilité avec le lien série)********************/
     this.$axios
       .get(
-        "https://api.themoviedb.org/3/genre/movie/list?api_key=68e6fe20044408329e01bb72c56233d4&language=fr-FR"
+        `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NUXT_ENV_API_KEY}&language=fr-FR`
       )
       .then((response) => {
         this.genres = response.data.genres;
