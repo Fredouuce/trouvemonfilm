@@ -1,0 +1,14 @@
+Projet trouve moi un film
+Clef api 68e6fe20044408329e01bb72c56233d4
+https://developers.themoviedb.org/3/discover/movie-discover (Pour les films) 
+https://developers.themoviedb.org/3/discover/tv-discover (Pour les séries)
+****************Idée du projet**************************
+L'idée de prot jet et de créer un site pour trouver des films ou des séries 
+Pour trouver nos films ou sdéries on aura besoin d'un systeme de triage 
+Sa s s'organise de cette façon
+//////////Vous rechercher un film ou une série ? 
+		Film Série
+/////////Vous rechercher quel genre de film ? 
+		(Genres des films actions romantique etc)
+/////////Triage par popularités 
+////////Triage possible par anéées si précisé optionnel
